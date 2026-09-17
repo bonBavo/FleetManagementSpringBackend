@@ -1,0 +1,20 @@
+package com.vibran.shared.enums;
+
+public enum AlertType {
+    THEFT_DETECTED,
+    UNAUTHORIZED_ACCESS,
+    OVERSPEED,
+    ROUTE_DEVIATION,
+    GEOFENCE_EXIT,
+    GEOFENCE_ENTRY,
+    LOW_FUEL,
+    FUEL_THEFT,
+    LOW_BATTERY,           // EV
+    BATTERY_DISCONNECT,
+    DEVICE_OFFLINE,
+    HARSH_BRAKING,
+    HARSH_ACCELERATION,
+    IGNITION_ON,
+    IGNITION_OFF,
+    SYSTEM_ERROR
+}

@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: FleetManagementSystem
+
+  profiles:
+    active: ${APP_PROFILE:dev}
+
+  data:
+    mongodb:
+        uri: ${MONGO_URI:mongodb://localhost:27017/fleetdb}
+#        password: ${MONGO_PASSWORD:}
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
+  threads:
+    virtual:
+      enabled: true
+
+jwt:
+  secret: ${JWT_SECRET}
+  access-token-expiry-ms: ${JWT_ACCESS_EXPIRY_MS:900000}       # 15 minutes
+  refresh-token-expiry-ms: ${JWT_REFRESH_EXPIRY_MS:604800000}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+mqtt:
+  broker-url:  ${MQTT_BROKER_URL:tcp://localhost:1883}
+  client-id:   ${MQTT_CLIENT_ID:fleet-spring-backend}
+  username:    ${MQTT_USERNAME:}
+  password:    ${MQTT_PASSWORD:}
+  topic:
+    telemetry: fleet/vehicles/+/telemetry
+    status:    fleet/devices/+/status
+
+firebase:
+  credentials-path: ${FIREBASE_CREDENTIALS_PATH}

@@ -1,0 +1,36 @@
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Secrets & Config ###
+.env
+*.env
+src/main/resources/firebase-service-account.json
+*.p12
+*.jks
+
+### Local & Compiled Docs ###
+PROJECT_DOCS_COMPILED.md
+REMAINING_TASKS.md
+

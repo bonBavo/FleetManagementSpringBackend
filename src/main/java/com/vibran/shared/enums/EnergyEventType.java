@@ -1,0 +1,14 @@
+package com.vibran.shared.enums;
+
+public enum EnergyEventType {
+    TRIP_START_SNAPSHOT,
+    TRIP_END_SNAPSHOT,
+    REFUEL_DETECTED,
+    FUEL_DROP_DETECTED,
+    CHARGE_STARTED,
+    CHARGE_COMPLETED,
+    CHARGE_INTERRUPTED,
+    LOW_CHARGE_WARNING,
+    MANUAL_READING,
+    PERIODIC_SNAPSHOT
+}
